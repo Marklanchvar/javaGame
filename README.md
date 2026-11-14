@@ -1,18 +1,22 @@
-# Neon Drift
+# Open Road — 3D Car Simulator
 
-A tiny Java Swing game inspired by classic arcade lane-dodging racers.
+A dependency-free Java Swing driving sandbox with a perspective 3D view and a simplified four-wheel rigid-body vehicle model. The scene and low-poly car are projected from 3D coordinates and drawn with Java AWT `drawPolygon` / `fillPolygon` APIs.
 
-How to run:
+## Run
 
-1. Open a terminal in the repository root.
-2. Compile:
-   javac src/Main.java
-3. Run:
-   java -cp src Main
+Requires Java 8 or newer:
 
-Controls:
-- Left / A: move left
-- Right / D: move right
-- R: restart after a crash
+```sh
+javac src/Main.java
+java -cp src Main
+```
 
-The game is intentionally simple and uses a pseudo-3D road so it works well in a plain Java project without extra libraries.
+## Controls
+
+- **W / Up:** throttle
+- **S / Down:** brake
+- **A,D / Left,Right:** steer
+- **Space:** handbrake (rear wheels)
+- **R:** reset car
+
+The model includes individual tire forces and slip angles, a friction limit, engine gearing and torque curve, braking, load-transfer approximations, yaw inertia, aerodynamic drag, rolling resistance, and reduced grip off the road. It is a real-time game/sandbox model, not a validated engineering or safety simulator.
