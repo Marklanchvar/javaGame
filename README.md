@@ -1,6 +1,6 @@
-# Open Road — 3D Car Simulator
+# Vehicle Dynamics Sandbox
 
-A dependency-free Java Swing driving sandbox with a perspective 3D view and a simplified four-wheel rigid-body vehicle model. The scene and low-poly car are projected from 3D coordinates and drawn with Java AWT `drawPolygon` / `fillPolygon` APIs.
+A dependency-free Java Swing sandbox for testing a simplified four-wheel rigid-body car model. The open proving ground includes a marked distance grid, acceleration/braking straight, slalom cones, two skidpads, and wide parallel surface lanes. Ground geometry, the low-poly car and test fixtures use perspective projection and Java polygon drawing.
 
 ## Run
 
@@ -17,6 +17,10 @@ java -cp src Main
 - **S / Down:** brake
 - **A,D / Left,Right:** steer
 - **Space:** handbrake (rear wheels)
-- **R:** reset car
+- **R:** reset vehicle and telemetry
 
-The model includes individual tire forces and slip angles, a friction limit, engine gearing and torque curve, braking, load-transfer approximations, yaw inertia, aerodynamic drag, rolling resistance, and reduced grip off the road. It is a real-time game/sandbox model, not a validated engineering or safety simulator.
+## Test areas
+
+Drive laterally across the labeled lanes to compare **gravel**, **wet asphalt**, **dry asphalt**, **ice**, and **dirt**. Each surface has distinct tire grip and rolling resistance. Use the centerline and distance boards for acceleration and braking runs, the cone slalom for transient handling, and the paired skidpads to explore steady-state cornering and oversteer.
+
+The HUD reports speed, gear, engine RPM, surface grip, tire slip, yaw rate, lateral acceleration, and distance from the start. Physics are intended for interactive experimentation, not validated engineering or safety analysis.
